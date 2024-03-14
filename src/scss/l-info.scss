@@ -1,0 +1,27 @@
+.l-info {
+
+  // .l-info__title
+
+  &__title {
+    display: block;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #7E7E82;
+    padding: 16px;
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: normal;
+  }
+
+  // .l-info__swiper
+
+  &__swiper {}
+
+  // .l-info__expandable
+
+  &__expandable {}
+}

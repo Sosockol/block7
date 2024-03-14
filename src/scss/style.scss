@@ -1,4 +1,4 @@
-@import './variables';
+@import './fontFace', './variables', './visually-hidden';
 
 @import './defaultButton',
 './desktopHeader',
@@ -7,13 +7,12 @@
 './menuList',
 './sideFooter',
 './contactsList',
-'./iconList';
+'./iconList',
+'./swipable',
+'./expandable';
 
 @import './l-header',
 './l-main',
 './l-sideMenu',
-'./l-desktopContainer';
-
-body {
-  font-size: 0;
-}
+'./l-desktopContainer',
+'./l-info.scss';

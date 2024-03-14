@@ -107,7 +107,7 @@
     align-items: center;
 
     @media (min-width: $tablet) {
-      display: block;
+      display: flex;
       margin-right: 16px;
     }
   }

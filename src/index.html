@@ -8,7 +8,6 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" type="image/svg+xml" href="./img/CPS.svg">
-    <link rel="stylesheet" href="./fonts/fontFace.css">
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
@@ -18,13 +17,13 @@
       <nav class="l-header__navbar navbar">
         <ul class="navbar__left">
           <li class="navbar__menu">
-            <button class='defaultButton' type="button">
+            <button class='defaultButton burger' type="button">
               <img alt="Открыть меню" src="./img/burger.svg">
             </button>
           </li>
           <li class="navbar__logo">
             <a>
-              <img alt="Логотип компании CPS" width="97px" height="51px" src="./img/CPS.svg">
+              <img alt="Логотип компании CPS" width="6.0625rem" height="3.1875rem" src="./img/CPS.svg">
             </a>
           </li>
         </ul>
@@ -59,139 +58,245 @@
     <!-- Конец Шапки -->
 
     <div class="l-desktopContainer">
-    <!-- Боковая Менюшка -->
-    <aside class="l-sideMenu">
-      <div class="l-sideMenu__stickyFlexBox">
-        <div class="l-sideMenu__top">
-          <!-- Шапка меню -->
-          <header class="l-sideMenu__header">
-            <nav class="l-header__navbar navbar navbar--leftOnly">
-              <ul class="navbar__left">
-                <li class="navbar__cross">
+      <!-- Боковая Менюшка -->
+      <aside class="l-sideMenu visually-hidden">
+        <div class="l-sideMenu__stickyFlexBox">
+          <div class="l-sideMenu__top">
+            <!-- Шапка меню -->
+            <header class="l-sideMenu__header">
+              <nav class="l-header__navbar navbar navbar--leftOnly">
+                <ul class="navbar__left">
+                  <li class="navbar__cross">
+                    <button class='defaultButton' type="button">
+                      <img alt="Закрыть меню" src="./img/cross.svg">
+                    </button>
+                  </li>
+                  <li class="navbar__logo">
+                    <a>
+                      <img alt="Логотип компании CPS" width="6.0625rem" height="3.1875rem" src="./img/CPS.svg">
+                    </a>
+                  </li>
+                  <li class="navbar__search">
+                    <button class='defaultButton' type="button">
+                      <img alt="Проверить статус ремонта" src="./img/search.svg">
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </header>
+            <!-- Список Навигации -->
+            <ul class="l-sideMenu__menuList menuList">
+              <li class="menuList__item"><a>Ремонт техники</a></li>
+              <li class="menuList__item"><a>Услуги и сервисы</a></li>
+              <li class="menuList__item"><a>Корпоративным клиентам</a></li>
+              <li class="menuList__item"><a>Продавцам техники</a></li>
+              <li class="menuList__item"><a>Партнерам</a></li>
+              <li class="menuList__item"><a>Производителям</a></li>
+              <li class="menuList__item"><a>Наши сервисные центры</a></li>
+              <li class="menuList__item"><a>Контакты</a></li>
+            </ul>
+          </div>
+          <div class="l-sideMenu__bottom">
+            <!-- Подвал меню -->
+            <footer class="l-sideMenu__footer sideFooter">
+              <ul class="sideFooter__iconList iconList">
+                <li class="iconList__call">
                   <button class='defaultButton' type="button">
-                    <img alt="Закрыть меню" src="./img/cross.svg">
+                    <img alt="Позвонить в службу поддержки" src="./img/call.svg">
                   </button>
                 </li>
-                <li class="navbar__logo">
-                  <a>
-                    <img alt="Логотип компании CPS" width="97px" height="51px" src="./img/CPS.svg">
-                  </a>
-                </li>
-                <li class="navbar__search">
+                <li class="iconList__chat">
                   <button class='defaultButton' type="button">
-                    <img alt="Проверить статус ремонта" src="./img/search.svg">
+                    <img alt="Чат поддержки" src="./img/chat.svg">
+                  </button>
+                </li>
+                <li class="iconList__profile">
+                  <button class='defaultButton' type="button">
+                    <img alt="Мой профиль" src="./img/profile.svg">
                   </button>
                 </li>
               </ul>
-            </nav>
-          </header>
-          <!-- Список Навигации -->
-          <ul class="l-sideMenu__menuList menuList">
-            <li class="menuList__item"><a>Ремонт техники</a></li>
-            <li class="menuList__item"><a>Услуги и сервисы</a></li>
-            <li class="menuList__item"><a>Корпоративным клиентам</a></li>
-            <li class="menuList__item"><a>Продавцам техники</a></li>
-            <li class="menuList__item"><a>Партнерам</a></li>
-            <li class="menuList__item"><a>Производителям</a></li>
-            <li class="menuList__item"><a>Наши сервисные центры</a></li>
-            <li class="menuList__item"><a>Контакты</a></li>
+              <address>
+                <ul class="sideFooter__contactsList contactsList">
+                  <li><a class="contactsList__mail" href="mailto:mail@cps.com">mail@cps.com</a></li>
+                  <li><a class="contactsList__phone" href="tel:+78008908900">8 800 890 8900</a></li>
+                </ul>
+              </address>
+              <ul class="sideFooter__languageList">
+                <li>RU</li>
+                <li>EN</li>
+                <li>CH</li>
+              </ul>
+            </footer>
+          </div>
+        </div>
+      </aside>
+      <!-- Конец Менюшки -->
+
+      <!-- Место для менюшек -->
+
+
+      <!-- Начало основной страницы -->
+      <main class="l-main">
+        <!-- Шапка для Десктопа -->
+        <header class="l-main__desktopHeader desktopHeader">
+          <h1 class="l-main__h1 desktopHeader__h1">Услуги и сервисы</h1>
+          <ul class="desktopHeader__list">
+            <li class="desktopHeader__repair">
+              <button class='desktopHeader__button defaultButton' type="button">
+                <p class='defaultButton__name'>Оставить заявку</p>
+                <img class='defaultButton__icon' alt="Оставить заявку на ремонт" src="./img/repair.svg">
+              </button>
+            </li>
+            <li class="desktopHeader__checkstatus">
+              <button class='desktopHeader__button defaultButton' type="button">
+                <p class='defaultButton__name'>Статус ремонта</p>
+                <img class='defaultButton__icon' alt="Проверить статус ремонта" src="./img/checkstatus.svg">
+              </button>
+            </li>
           </ul>
-        </div>
-        <div class="l-sideMenu__bottom">
-          <!-- Подвал меню -->
-          <footer class="l-sideMenu__footer sideFooter">
-            <ul class="sideFooter__iconList iconList">
-              <li class="iconList__call">
-                <button class='defaultButton' type="button">
-                  <img alt="Позвонить в службу поддержки" src="./img/call.svg">
-                </button>
+        </header>
+        <!-- Слайдер -->
+        <nav class="l-main__slider slider">
+          <ul class="slider__list">
+            <li class="slider__item">
+              <a class="slider__link">Ремонтируемые устройства</a>
+            </li>
+            <li class="slider__item">
+              <a class="slider__link">Дополнительные услуги</a>
+            </li>
+            <li class="slider__item">
+              <a class="slider__link">Цены на услуги</a>
+            </li>
+            <li class="slider__item">
+              <a class="slider__link">Адреса сервисных центров</a>
+            </li>
+            <li class="slider__item">
+              <a class="slider__link">Специальные цены</a>
+            </li>
+            <li class="slider__item">
+              <a class="slider__link">Отзывы</a>
+            </li>
+            <div class="slider__fader"></div>
+          </ul>
+        </nav>
+        <!-- Текстовая часть -->
+        <section class="l-main__section">
+          <article class="l-main__article">
+            <p class="l-main__p1">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <p class="l-main__p2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class='l-main__desktopText'>, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+            <button class='l-main__expandButton defaultButton' type="button"><p class="l-main__readNext">Читать далее</p></button>
+          </article>
+          <div class="l-main__pictureWraper">
+            <img class="l-main__picture" alt="Логотип компании CPS" src="./img/Picture Copy.png">
+          </div>
+        </section>
+        <section class="l-info">
+          <h2 class="l-info__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
+          <nav class="swiper mySwiper l-info__swiper visually-hidden">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
               </li>
-              <li class="iconList__chat">
-                <button class='defaultButton' type="button">
-                  <img alt="Чат поддержки" src="./img/chat.svg">
-                </button>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/samsung.png" alt="Партнер samsung">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
               </li>
-              <li class="iconList__profile">
-                <button class='defaultButton' type="button">
-                  <img alt="Мой профиль" src="./img/profile.svg">
-                </button>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/bosch.png" alt="Партнер bosch">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/apple.png" alt="Партнер apple">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/acer.png" alt="Партнер acer">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/hp.png" alt="Партнер hp">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/sony.png" alt="Партнер sony">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/viewsonic.png" alt="Партнер viewsonic">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="swiper-slide">
+                <img class="swiper__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
               </li>
             </ul>
-            <address>
-              <ul class="sideFooter__contactsList contactsList">
-                <li><a class="contactsList__mail" href="mailto:mail@cps.com">mail@cps.com</a></li>
-                <li><a class="contactsList__phone" href="tel:+78008908900">8 800 890 8900</a></li>
-              </ul>
-            </address>
-            <ul class="sideFooter__languageList">
-              <li>RU</li>
-              <li>EN</li>
-              <li>CH</li>
+            <div class="swiper-pagination"></div>
+            <div class="swiper__fader"></div>
+          </nav>
+          
+          <nav class="expandable l-info__expandable visually-hidden">
+            <ul class="expandable__list">
+              <li class="expandable__item">
+                <img class="expandable__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item">
+                <img class="expandable__icon" src="./img/samsung.png" alt="Партнер samsung">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item">
+                <img class="expandable__icon" src="./img/bosch.png" alt="Партнер bosch">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item">
+                <img class="expandable__icon" src="./img/apple.png" alt="Партнер apple">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item">
+                <img class="expandable__icon" src="./img/acer.png" alt="Партнер acer">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item">
+                <img class="expandable__icon" src="./img/hp.png" alt="Партнер hp">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item ">
+                <img class="expandable__icon" src="./img/sony.png" alt="Партнер sony">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item ">
+                <img class="expandable__icon" src="./img/viewsonic.png" alt="Партнер viewsonic">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item ">
+                <img class="expandable__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item ">
+                <img class="expandable__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item ">
+                <img class="expandable__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
+              <li class="expandable__item ">
+                <img class="expandable__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
+                <button class='defaultButton' type='button'><img class="expandable__icon" src="./img/goNext.svg" alt="Подробности"></button>
+              </li>
             </ul>
-          </footer>
-        </div>
-      </div>
-    </aside>
-    <!-- Конец Менюшки -->
-
-    <!-- Место для менюшек -->
-
-
-    <!-- Начало основной страницы -->
-    <main class="l-main">
-      <!-- Шапка для Десктопа -->
-      <header class="l-main__desktopHeader desktopHeader">
-        <h1 class="l-main__h1 desktopHeader__h1">Услуги и сервисы</h1>
-        <ul class="desktopHeader__list">
-          <li class="desktopHeader__repair">
-            <button class='desktopHeader__button defaultButton' type="button">
-              <p class='defaultButton__name'>Оставить заявку</p>
-              <img class='defaultButton__icon' alt="Оставить заявку на ремонт" src="./img/repair.svg">
+            <button class="defaultButton expandable__button" type="button">
+              <img class="expandable__arrow" src="./img/expand.svg" alt="arrow">
+              <p class="expandable__showAll">Показать все</p>
             </button>
-          </li>
-          <li class="desktopHeader__checkstatus">
-            <button class='desktopHeader__button defaultButton' type="button">
-              <p class='defaultButton__name'>Статус ремонта</p>
-              <img class='defaultButton__icon' alt="Проверить статус ремонта" src="./img/checkstatus.svg">
-            </button>
-          </li>
-        </ul>
-      </header>
-      <!-- Слайдер -->
-      <nav class="l-main__slider slider">
-        <ul class="slider__list">
-          <li class="slider__item">
-            <a class="slider__link">Ремонтируемые устройства</a>
-          </li>
-          <li class="slider__item">
-            <a class="slider__link">Дополнительные услуги</a>
-          </li>
-          <li class="slider__item">
-            <a class="slider__link">Цены на услуги</a>
-          </li>
-          <li class="slider__item">
-            <a class="slider__link">Адреса сервисных центров</a>
-          </li>
-          <li class="slider__item">
-            <a class="slider__link">Специальные цены</a>
-          </li>
-          <li class="slider__item">
-            <a class="slider__link">Отзывы</a>
-          </li>
-          <div class="slider__fader"></div>
-        </ul>
-      </nav>
-      <!-- Текстовая часть -->
-      <section class="l-main__section">
-        <article class="l-main__article">
-          <p class="l-main__p1">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-          <p class="l-main__p2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class='l-main__desktopText'>, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-          <button class='l-main__expandButton defaultButton' type="button"><p class="l-main__readNext">Читать далее</p></button>
-        </article>
-        <div class="l-main__pictureWraper">
-          <img class="l-main__picture" alt="Логотип компании CPS" src="./img/Picture Copy.png">
-        </div>
-      </section>
+          </nav>
+        </section>
+
+      </main>
+      
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </div>
     </main>
   </body>
