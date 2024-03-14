@@ -1,0 +1,167 @@
+/* Общий стиль меню */
+.l-sideMenu {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 320px;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  padding-bottom: 32px;
+  box-shadow: 16px 0px 52px 0px #0E185033;
+  font-family: 'TT Lakes';
+  color: #1B1C21;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Модификатор для навбара с основной страницы
+   Шапка менюшки
+*/
+.navbar--leftOnly {
+  display: block;
+}
+
+.l-sideMenu__header {
+  margin-bottom: 28px;
+}
+
+.navbar__cross {
+  margin-right: 16.73px;
+}
+
+.navbar__search {
+  margin-left: auto;
+}
+/* Конец Шапки */
+
+/* Список навигации */
+.menuList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+.menuList__item {
+  cursor: pointer;
+  margin-left: -24px;
+  padding: 8px 0;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.menuList__item:hover {
+  color: #7E7E82;
+}
+
+.menuList__item:active {
+  background-color: inherit;
+}
+
+.menuList__item::before {
+  display: inline-block;
+  content: '';
+  height: 28px;
+  border: 2px solid #41F6D7;
+  margin-right: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.menuList__item:hover::before {
+  opacity: 1;
+}
+
+.menuList__item:last-child {
+  margin: 0;
+  margin-left: -24px;
+}
+/* Конец списка навигации */
+
+/* Начало футера */
+.iconList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.iconList__call {
+  margin-right: 16px;
+}
+
+.iconList__chat {
+  margin-right: 16px;
+}
+
+.contactsList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 8px;
+}
+
+.contactsList__mail,
+.contactsList__mail:visited,
+.contactsList__mail:hover,
+.contactsList__mail:focus  {
+  display: block;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  color: #1B1C21;
+  margin-bottom: 12px;
+  background: inherit;
+}
+
+.contactsList__phone,
+.contactsList__phone:visited,
+.contactsList__phone:hover,
+.contactsList__phone:focus {
+  display: block;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 900;
+  color: #1B1C21;
+  margin-bottom: 40px;
+  background: inherit;
+}
+
+.sideFooter__languageList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 87px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.sideFooter__languageList li:first-child {
+  color: #7E7E82;
+}
+/* Конец Футера */
