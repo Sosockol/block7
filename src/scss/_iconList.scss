@@ -1,0 +1,18 @@
+.iconList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 16px;
+  // .iconList__call
+
+  &__call {
+    margin-right: 16px;
+  }
+
+  // .iconList__chat
+
+  &__chat {
+    margin-right: 16px;
+  }
+}

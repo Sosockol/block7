@@ -1,0 +1,27 @@
+.l-sideMenu {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 320px;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  padding-bottom: 32px;
+  box-shadow: 16px 0px 52px 0px #0E185033;
+  font-family: 'TT Lakes';
+  color: #1B1C21;
+  font-weight: 500;
+  font-size: 16px;
+
+  // .l-sideMenu__header
+
+  &__header {
+    margin-bottom: 28px;
+  }
+}

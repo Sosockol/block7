@@ -1,0 +1,41 @@
+.contactsList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 8px;
+
+  // .contactsList__mail
+
+  &__mail,
+  &__mail:visited,
+  &__mail:hover,
+  &__mail:focus {
+    display: block;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    color: #1B1C21;
+    margin-bottom: 12px;
+    background: inherit;
+  }
+
+  // .contactsList__phone
+
+  &__phone,
+  &__phone:visited,
+  &__phone:hover,
+  &__phone:focus {
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 800;
+    color: #1B1C21;
+    margin-bottom: 40px;
+    background: inherit;
+  }
+}

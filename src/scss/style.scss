@@ -1,8 +1,14 @@
-@import './variables',
-'./defaultButton',
+@import './variables';
+
+@import './defaultButton',
 './desktopHeader',
-'./l-header',
-'./l-main',
 './navbar',
 './slider',
-'./variables';
+'./menuList',
+'./sideFooter',
+'./contactsList',
+'./iconList';
+
+@import './l-header',
+'./l-main',
+'./l-sideMenu';

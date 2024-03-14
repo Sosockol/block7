@@ -129,4 +129,20 @@
       margin: 0;
     }
   }
+
+  &__cross {
+    margin-right: 16.73px;
+  }
+
+  // .navbar__search
+
+  &__search {
+    margin-left: auto;
+  }
+
+  // .navbar--leftOnly
+
+  &--leftOnly {
+    display: block;
+  }
 }
