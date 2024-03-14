@@ -4,7 +4,7 @@
   align-items: center;
   font-family: 'TT Lakes', sans-serif;
   color: $text;
-  font-size: 16px;
+  font-size: 0px;
 
   // .navbar__left
 
@@ -132,6 +132,10 @@
 
   &__cross {
     margin-right: 16.73px;
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 
   // .navbar__search

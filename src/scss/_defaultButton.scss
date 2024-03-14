@@ -7,7 +7,7 @@
   cursor: pointer;
   font-family: 'TT Lakes', sans-serif;
   color: $text;
-  font-size: 16px;
+  font-size: 0px;
 
   // .defaultButton__name
 
@@ -15,11 +15,13 @@
     display: inline-block;
     margin: 0;
     margin-right: 8px;
+    font-size: 16px;
   }
 
   // .defaultButton__icon
 
   &__icon {
     display: inline-block;
+    font-size: 16px;
   }
 }

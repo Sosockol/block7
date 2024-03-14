@@ -1,8 +1,9 @@
 .l-sideMenu {
+  box-sizing: border-box;
   position: fixed;
   padding-inline: 16px;
   padding-top: 24px;
-  padding-bottom: 32px;
+  padding-bottom: 0;
   width: 320px;
   left: 0;
   top: 0;
@@ -11,16 +12,15 @@
   box-shadow: 16px 0px 52px 0px #0E185033;
   background-color: white;
 
-
-
   @media (min-width: $LPhone) {
     padding: 24px;
-    padding-bottom: 32px;
+    padding-bottom: 0;
   }
-
 
   @media (min-width: $desktop) {
     padding-top: 42px;
+    padding-inline: 24px;
+    padding-bottom: 0;
     display: block;
     position: static;
     height: 100%;
@@ -31,7 +31,7 @@
 
   &__stickyFlexBox {
     height: 100%;
-    max-height: 900px;
+    max-height: 95svh;
     max-width: 276px;
     display: flex;
     flex-direction: column;
@@ -42,9 +42,8 @@
     font-size: 16px;
 
     @media (min-width: $desktop) {
-      padding-top: 42px;
       position: sticky;
-      top: 0;
+      top: 42px;
     }
   }
 
@@ -52,6 +51,10 @@
 
   &__header {
     margin-bottom: 20px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 31px;
+    }
   }
 
   // .l-sideMenu__list

@@ -6,12 +6,6 @@
     margin-bottom: 16px;
   }
 
-  // .sideFooter__contactsList
-
-  &__contactsList {
-    margin-bottom: 8px;
-  }
-
   // .sideFooter__languageList
 
   &__languageList {
@@ -21,9 +15,15 @@
     width: 87px;
     margin: 0;
     padding: 0;
+    padding-bottom: 32px;
     list-style-type: none;
     line-height: 24px;
     letter-spacing: -0.2px;
+    margin-top: 8px;
+
+    @media (min-width: $desktop) {
+      margin-top: 40px;
+    }
   }
 
   &__languageList li:first-child {
