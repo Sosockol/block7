@@ -1,0 +1,97 @@
+.slider {
+  font-family: 'TT Lakes', sans-serif;
+  color: $text;
+  font-size: 16px;
+  // .slider__list
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+    overflow: auto;
+    line-height: 24px;
+    white-space: nowrap;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    padding-right: 10vw;
+    list-style-type: none;
+
+    @media (min-width: $desktop) {
+      position: relative;
+      flex-wrap: wrap;
+      font-size: 16px;
+      line-height: 24px;
+      white-space: nowrap;
+      margin: 0;
+      margin-right: 25px;
+      margin-left: 32px;
+      padding: 0;
+    }
+  }
+
+  &__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  // .slider__item
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+    padding-left: 15px;
+    border-radius: 6px;
+    color: #767679;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+
+    @media (min-width: $desktop) {
+      cursor: pointer;
+      padding: 8px 17px;
+    }
+  }
+
+  &__item:hover,
+  &__item:active {
+    border-color: #B8FFEC;
+    background: #FFFFFF;
+  }
+
+  // .slider__link
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .slider__fader
+
+  &__fader {
+    position: absolute;
+    right: 0;
+    width: 10vw;
+    height: 40px;
+    pointer-events: none;
+    background: #F8F8F8;
+    background: linear-gradient(90deg,
+        rgba(248, 248, 248, 0.1) 0%,
+        rgba(248, 248, 248, 0.5)20%,
+        rgba(248, 248, 248, 1) 100%);
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+}

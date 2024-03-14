@@ -1,0 +1,19 @@
+.l-header {
+  padding: 24px 16px;
+  font-size: 0;
+  font-family: 'TT Lakes', sans-serif;
+  color: $text;
+  font-size: 16px;
+
+  @media (min-width: $tablet) {
+    padding: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+
+  // .l-header__navbar
+
+  &__navbar {}
+}

@@ -1,0 +1,25 @@
+.defaultButton {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'TT Lakes', sans-serif;
+  color: $text;
+  font-size: 16px;
+
+  // .defaultButton__name
+
+  &__name {
+    display: inline-block;
+    margin: 0;
+    margin-right: 8px;
+  }
+
+  // .defaultButton__icon
+
+  &__icon {
+    display: inline-block;
+  }
+}
