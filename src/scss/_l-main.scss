@@ -1,7 +1,6 @@
 .l-main {
   background-color: $mainBg;
   padding-top: 24px;
-  height: 100vh;
   font-family: 'TT Lakes', sans-serif;
   color: $text;
   font-size: 16px;
@@ -63,10 +62,12 @@
 
     @media (min-width: $tablet) {
       display: flex;
-      margin-top: 32px;
-      margin-left: 24px;
-      margin-right: 24px;
-      margin-bottom: 40px;
+      padding: 32px 24px 32px 24px;
+    }
+
+    @media (min-width: $desktop) {
+      display: flex;
+      padding: 8px 24px 51px 24px;
     }
   }
 

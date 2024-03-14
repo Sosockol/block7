@@ -1,5 +1,10 @@
 .expandable {
-  padding: 8px 32px 34px 32px;
+  padding: 8px 24px 34px 24px;
+
+  @media (min-width: $desktop) {
+    padding: 8px 32px 34px 32px;
+  }
+
   // .expandable__list
 
   &__list {
@@ -10,9 +15,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 16px 32px;
+    gap: 16px 24px;
     height: 160px;
     overflow: hidden;
+
+    @media (min-width: $desktop) {
+      gap: 16px 32px;
+    }
   }
 
   // .expandable__item
@@ -30,6 +39,10 @@
     padding: 16px;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
+
+    @media (min-width: $desktop) {
+      width: 240px;
+    }
   }
 
   // .expandable__icon
@@ -43,7 +56,13 @@
   &__button {
     line-height: 24px;
     vertical-align: center;
+    font-size: 16px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
   }
+
 
   // .expandable__arrow
 
