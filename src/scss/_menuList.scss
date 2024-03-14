@@ -10,7 +10,7 @@
 
   &__item {
     cursor: pointer;
-    margin-left: -24px;
+    margin-left: -16px;
     padding: 8px 0;
     line-height: 24px;
     letter-spacing: -0.2px;
@@ -19,7 +19,13 @@
     display: flex;
     align-items: center;
     transition: 0.3s;
+
+    @media (min-width: $LPhone) {
+      margin-left: -24px;
+    }
   }
+
+
 
   &__item:hover {
     color: #7E7E82;
@@ -34,11 +40,15 @@
     content: '';
     height: 28px;
     border: 2px solid #41F6D7;
-    margin-right: 20px;
+    margin-right: 12px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     opacity: 0;
     transition: 0.3s;
+
+    @media (min-width: $LPhone) {
+      margin-right: 20px;
+    }
   }
 
   &__item:hover::before {
@@ -47,6 +57,10 @@
 
   &__item:last-child {
     margin: 0;
-    margin-left: -24px;
+    margin-left: -16px;
+
+    @media (min-width: $LPhone) {
+      margin-left: -24px;
+    }
   }
 }

@@ -1,27 +1,62 @@
 .l-sideMenu {
-  box-sizing: border-box;
   position: fixed;
+  padding-inline: 16px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  width: 320px;
   left: 0;
   top: 0;
-  background-color: white;
-  width: 320px;
-  height: 100vh;
+  height: 100%;
   z-index: 100;
-  display: flex;
-  opacity: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 24px;
-  padding-bottom: 32px;
   box-shadow: 16px 0px 52px 0px #0E185033;
-  font-family: 'TT Lakes';
-  color: #1B1C21;
-  font-weight: 500;
-  font-size: 16px;
+  background-color: white;
+
+
+
+  @media (min-width: $LPhone) {
+    padding: 24px;
+    padding-bottom: 32px;
+  }
+
+
+  @media (min-width: $desktop) {
+    padding-top: 42px;
+    display: block;
+    position: static;
+    height: 100%;
+    box-shadow: none;
+  }
+
+  // .l-sideMenu__stickyFlexBox
+
+  &__stickyFlexBox {
+    height: 100%;
+    max-height: 900px;
+    max-width: 276px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'TT Lakes';
+    color: #1B1C21;
+    font-weight: 500;
+    font-size: 16px;
+
+    @media (min-width: $desktop) {
+      padding-top: 42px;
+      position: sticky;
+      top: 0;
+    }
+  }
 
   // .l-sideMenu__header
 
   &__header {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+  }
+
+  // .l-sideMenu__list
+
+  &__menuList {
+    margin-bottom: 20px;
   }
 }

@@ -11,4 +11,9 @@
 
 @import './l-header',
 './l-main',
-'./l-sideMenu';
+'./l-sideMenu',
+'./l-desktopContainer';
+
+body {
+  font-size: 0;
+}

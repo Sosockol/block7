@@ -1,5 +1,19 @@
 .sideFooter {
 
+  // .sideFooter__iconList
+
+  &__iconList {
+    margin-bottom: 16px;
+  }
+
+  // .sideFooter__contactsList
+
+  &__contactsList {
+    margin-bottom: 8px;
+  }
+
+  // .sideFooter__languageList
+
   &__languageList {
     display: flex;
     justify-content: space-between;

@@ -58,75 +58,78 @@
     </header>
     <!-- Конец Шапки -->
 
+    <div class="l-desktopContainer">
     <!-- Боковая Менюшка -->
     <aside class="l-sideMenu">
-      <div class="l-sideMenu__top">
-        <!-- Шапка меню -->
-        <header class="l-sideMenu__header">
-          <nav class="l-header__navbar navbar navbar--leftOnly">
-            <ul class="navbar__left">
-              <li class="navbar__cross">
+      <div class="l-sideMenu__stickyFlexBox">
+        <div class="l-sideMenu__top">
+          <!-- Шапка меню -->
+          <header class="l-sideMenu__header">
+            <nav class="l-header__navbar navbar navbar--leftOnly">
+              <ul class="navbar__left">
+                <li class="navbar__cross">
+                  <button class='defaultButton' type="button">
+                    <img alt="Закрыть меню" src="./img/cross.svg">
+                  </button>
+                </li>
+                <li class="navbar__logo">
+                  <a>
+                    <img alt="Логотип компании CPS" width="97px" height="51px" src="./img/CPS.svg">
+                  </a>
+                </li>
+                <li class="navbar__search">
+                  <button class='defaultButton' type="button">
+                    <img alt="Проверить статус ремонта" src="./img/search.svg">
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <!-- Список Навигации -->
+          <ul class="l-sideMenu__menuList menuList">
+            <li class="menuList__item"><a>Ремонт техники</a></li>
+            <li class="menuList__item"><a>Услуги и сервисы</a></li>
+            <li class="menuList__item"><a>Корпоративным клиентам</a></li>
+            <li class="menuList__item"><a>Продавцам техники</a></li>
+            <li class="menuList__item"><a>Партнерам</a></li>
+            <li class="menuList__item"><a>Производителям</a></li>
+            <li class="menuList__item"><a>Наши сервисные центры</a></li>
+            <li class="menuList__item"><a>Контакты</a></li>
+          </ul>
+        </div>
+        <div class="l-sideMenu__bottom">
+          <!-- Подвал меню -->
+          <footer class="l-sideMenu__footer sideFooter">
+            <ul class="sideFooter__iconList iconList">
+              <li class="iconList__call">
                 <button class='defaultButton' type="button">
-                  <img alt="Закрыть меню" src="./img/cross.svg">
+                  <img alt="Позвонить в службу поддержки" src="./img/call.svg">
                 </button>
               </li>
-              <li class="navbar__logo">
-                <a>
-                  <img alt="Логотип компании CPS" width="97px" height="51px" src="./img/CPS.svg">
-                </a>
-              </li>
-              <li class="navbar__search">
+              <li class="iconList__chat">
                 <button class='defaultButton' type="button">
-                  <img alt="Проверить статус ремонта" src="./img/search.svg">
+                  <img alt="Чат поддержки" src="./img/chat.svg">
+                </button>
+              </li>
+              <li class="iconList__profile">
+                <button class='defaultButton' type="button">
+                  <img alt="Мой профиль" src="./img/profile.svg">
                 </button>
               </li>
             </ul>
-          </nav>
-        </header>
-        <!-- Список Навигации -->
-        <ul class="l-sideMenu__list menuList">
-          <li class="menuList__item"><a>Ремонт техники</a></li>
-          <li class="menuList__item"><a>Услуги и сервисы</a></li>
-          <li class="menuList__item"><a>Корпоративным клиентам</a></li>
-          <li class="menuList__item"><a>Продавцам техники</a></li>
-          <li class="menuList__item"><a>Партнерам</a></li>
-          <li class="menuList__item"><a>Производителям</a></li>
-          <li class="menuList__item"><a>Наши сервисные центры</a></li>
-          <li class="menuList__item"><a>Контакты</a></li>
-        </ul>
-      </div>
-      <div class="l-sideMenu__bottom">
-        <!-- Подвал меню -->
-        <footer class="l-sideMenu__footer sideFooter">
-          <ul class="sideFooter__iconList iconList">
-            <li class="iconList__call">
-              <button class='defaultButton' type="button">
-                <img alt="Позвонить в службу поддержки" src="./img/call.svg">
-              </button>
-            </li>
-            <li class="iconList__chat">
-              <button class='defaultButton' type="button">
-                <img alt="Чат поддержки" src="./img/chat.svg">
-              </button>
-            </li>
-            <li class="iconList__profile">
-              <button class='defaultButton' type="button">
-                <img alt="Мой профиль" src="./img/profile.svg">
-              </button>
-            </li>
-          </ul>
-          <address>
-            <ul class="sideFooter__contactsList contactsList">
-              <li><a class="contactsList__mail" href="mailto:mail@cps.com">mail@cps.com</a></li>
-              <li><a class="contactsList__phone" href="tel:+78008908900">8 800 890 8900</a></li>
+            <address>
+              <ul class="sideFooter__contactsList contactsList">
+                <li><a class="contactsList__mail" href="mailto:mail@cps.com">mail@cps.com</a></li>
+                <li><a class="contactsList__phone" href="tel:+78008908900">8 800 890 8900</a></li>
+              </ul>
+            </address>
+            <ul class="sideFooter__languageList">
+              <li>RU</li>
+              <li>EN</li>
+              <li>CH</li>
             </ul>
-          </address>
-          <ul class="sideFooter__languageList">
-            <li>RU</li>
-            <li>EN</li>
-            <li>CH</li>
-          </ul>
-        </footer>
+          </footer>
+        </div>
       </div>
     </aside>
     <!-- Конец Менюшки -->
@@ -188,7 +191,8 @@
         <div class="l-main__pictureWraper">
           <img class="l-main__picture" alt="Логотип компании CPS" src="./img/Picture Copy.png">
         </div>
-    </section>
+      </section>
+      </div>
     </main>
   </body>
 </html>
