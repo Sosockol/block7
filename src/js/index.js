@@ -1,41 +1,57 @@
 import '../scss/style.scss'
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
 
-const slider = new Swiper('.mySwiper', {
+const hideClass = 'visually-hidden';
+
+let swiperObj = new Swiper('.mySwiper', {
+  modules: [Pagination],
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 
   slidesPerView: 'auto',
+
+  on: {
+    resize: function enableOnlyMobile(swiper) {
+      if (768 < window.innerWidth) {
+        swiper.disable();
+        swiper.el.classList.add(hideClass);
+      } else {
+        swiper.enable();
+        swiper.el.classList.remove(hideClass);
+      }
+    }
+  }
 });
 
-const swiper = document.querySelector('.l-info__swiper');
 const expandable = document.querySelector('.l-info__expandable');
-const hideClass = 'visually-hidden';
-swiper.hidden = true;
-expandable.hidden = true;
 
 document.addEventListener('DOMContentLoaded', function () {
   if (768 > window.screen.width) {
-    swiper.classList.remove(hideClass);
+    swiperObj.el.classList.remove(hideClass);
+  }
+
+
+  if (768 <= window.screen.width) {
     expandable.classList.remove(hideClass);
-    swiper.hidden = false;
-  } else {
-    expandable.classList.remove(hideClass);
-    swiper.classList.remove(hideClass);
-    expandable.hidden = false;
   }
 });
 
 window.addEventListener('resize', () => {
-  if (768 > window.innerWidth) {
-    swiper.hidden = false;
-    expandable.hidden = true;
-  } else {
-    swiper.hidden = true;
-    expandable.hidden = false;
+  if (768 > window.screen.width) {
+    swiperObj.el.classList.remove(hideClass);
+    expandable.classList.add(hideClass);
+  }
+
+
+  if (768 <= window.screen.width) {
+    expandable.classList.remove(hideClass);
+    swiperObj.el.classList.add(hideClass);
   }
 });
+
 
 const expandButton = expandable.querySelector('.expandable__button');
 const expandList = expandable.firstElementChild;

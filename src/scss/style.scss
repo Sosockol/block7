@@ -1,4 +1,9 @@
-@import './fontFace', './variables', './visually-hidden';
+@import './fontFace',
+'./variables',
+'./visually-hidden',
+'../../node_modules/swiper/swiper',
+'../../node_modules/swiper/modules/pagination.css';
+
 
 @import './defaultButton',
 './desktopHeader',
