@@ -40,6 +40,10 @@
     border: 1px solid #EAEAEA;
     border-radius: 6px;
 
+    @media (min-width: $tablet) {
+      width: 224px;
+    }
+
     @media (min-width: $desktop) {
       width: 240px;
     }

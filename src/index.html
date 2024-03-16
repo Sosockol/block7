@@ -11,6 +11,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <div class="desktopShadow visually-hidden"></div>
     <!-- Шапка для телефона/планшета -->
     <header class="l-header">
       <nav class="l-header__navbar navbar">
@@ -55,9 +56,38 @@
       </nav>
     </header>
     <!-- Конец Шапки -->
+    
+    <!-- Правые формы -->
+    <aside class="l-sideMenu l-sideMenu--right visually-hidden">
+        <button class='l-sideMenu__cross defaultButton defaultButton__icon'>
+          <img src="./img/cross.svg" alt="Закрыть">
+        </button>
+        <form action="" method="post" class="l-sideMenu__form sideForm">
+        <h1 class="sideForm__h1">Обратная связь</h1>
+        <input type="text" class="sideForm__input" required minlength="2" maxlength="10" size="10" placeholder="Имя">
+        <input type="number" class="sideForm__input" required placeholder="Телефон">
+        <input type="email" class="sideForm__input" required placeholder="Электронная почта">
+        <textarea class='sideForm__textArea' cols="30" rows="10" placeholder="Сообщение"></textarea>
+        <p class="sideForm__policy">Нажимая “отправить”, вы даете согласие на <a class='sideForm__anchor'>обработку персональных данных</a> и соглашаетесь с нашей <a class="sideForm__anchor">политикой конфиденциальности</a></p>
+        <input type="submit" class="sideForm__submit defaultButton" value="ОТПРАВИТЬ      &#x276F;">
+      </form>
+    </aside>
 
+    <aside class="l-sideMenu l-sideMenu--right visually-hidden">
+      
+      <button class='l-sideMenu__cross defaultButton defaultButton__icon'>
+        <img src="./img/cross.svg" alt="Закрыть">
+      </button>
+      <form action="" method="post" class="l-sideMenu__form sideForm">
+      <h1 class="sideForm__h1">Заказать звонок</h1>
+      <input type="number" class="sideForm__input" required placeholder="Телефон">
+      <p class="sideForm__policy">Нажимая “отправить”, вы даете согласие на <a class='sideForm__anchor'>обработку персональных данных</a> и соглашаетесь с нашей <a class="sideForm__anchor">политикой конфиденциальности</a></p>
+      <input type="submit" class="sideForm__submit defaultButton" value="ОТПРАВИТЬ      &#x276F;">
+    </form>
+  </aside>
+
+  <!-- Боковая Менюшка -->
     <div class="l-desktopContainer">
-      <!-- Боковая Менюшка -->
       <aside class="l-sideMenu visually-hidden">
         <div class="l-sideMenu__stickyFlexBox">
           <div class="l-sideMenu__top">

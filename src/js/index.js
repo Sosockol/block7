@@ -52,11 +52,9 @@ window.addEventListener('resize', () => {
   }
 });
 
-
 const expandButton = expandable.querySelector('.expandable__button');
 const expandList = expandable.firstElementChild;
 const buttonParagraph = expandButton.lastElementChild;
-
 const expandArrow = expandButton.firstElementChild;
 
 
@@ -73,30 +71,88 @@ expandButton.addEventListener('click', () => {
   }
 });
 
-const sidebar = document.querySelector('.l-sideMenu');
+const leftMenu = document.querySelector('.l-desktopContainer .l-sideMenu');
 
 document.addEventListener('DOMContentLoaded', function () {
   if (1440 <= window.screen.width) {
-    sidebar.classList.remove(hideClass);
+    leftMenu.classList.remove(hideClass);
   }
 });
 
 window.addEventListener('resize', () => {
   if (1440 <= window.screen.width) {
-    sidebar.classList.remove(hideClass);
+    leftMenu.classList.remove(hideClass);
   } else {
-    sidebar.classList.add(hideClass);
+    leftMenu.classList.add(hideClass);
   }
 });
 
 const burger = document.querySelector('.burger');
+const shadow = document.body.querySelector('.desktopShadow');
 
 burger.addEventListener('click', (evt) => {
-  sidebar.classList.remove(hideClass);
+  document.body.style = 'overflow: hidden;';
+  leftMenu.classList.remove(hideClass);
+  shadow.classList.remove(hideClass);
 });
 
-const cross = sidebar.querySelector('.navbar__cross');
+const cross = document.querySelector('.navbar__cross');
 
 cross.addEventListener('click', () => {
-  sidebar.classList.add(hideClass);
+  document.body.style = '';
+  leftMenu.classList.add(hideClass);
+  shadow.classList.add(hideClass);
 });
+
+const repairButton = document.querySelector('.navbar__repair');
+const repairButton2 = document.querySelector('.desktopHeader__repair');
+const rightBars = document.querySelectorAll('.l-sideMenu--right');
+
+repairButton.addEventListener('click', () => {
+  document.body.style = 'overflow: hidden;';
+  rightBars[0].classList.remove(hideClass);
+  shadow.classList.remove(hideClass);
+});
+repairButton2.addEventListener('click', () => {
+  document.body.style = 'overflow: hidden;';
+  rightBars[0].classList.remove(hideClass);
+  shadow.classList.remove(hideClass);
+});
+
+const checkStatusButton = document.querySelector('.navbar__checkstatus');
+const checkStatusButton2 = document.querySelector('.desktopHeader__checkstatus');
+
+checkStatusButton.addEventListener('click', () => {
+  document.body.style = 'overflow: hidden;';
+  rightBars[1].classList.remove(hideClass);
+  shadow.classList.remove(hideClass);
+});
+checkStatusButton2.addEventListener('click', () => {
+  document.body.style = 'overflow: hidden;';
+  rightBars[1].classList.remove(hideClass);
+  shadow.classList.remove(hideClass);
+});
+
+const rightBarsCross = rightBars[0].querySelector('.l-sideMenu__cross');
+const rightBarsCross2 = rightBars[1].querySelector('.l-sideMenu__cross');
+rightBarsCross.addEventListener('click', () => {
+  document.body.style = '';
+  rightBars[0].classList.add(hideClass);
+  shadow.classList.add(hideClass);
+});
+
+rightBarsCross2.addEventListener('click', () => {
+  document.body.style = '';
+  shadow.classList.add(hideClass);
+  rightBars[1].classList.add(hideClass);
+});
+
+shadow.addEventListener('click', () => {
+  document.body.style = '';
+  rightBars[0].classList.add(hideClass);
+  rightBars[1].classList.add(hideClass);
+  shadow.classList.add(hideClass);
+  if (window.screen.width < 1440) {
+    leftMenu.classList.add(hideClass);
+  }
+})

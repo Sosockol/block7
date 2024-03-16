@@ -1,0 +1,119 @@
+.sideForm {
+  display: block;
+  color: $text;
+  font-size: 16px;
+
+	// .sideForm__h1
+
+  &__h1 {
+    margin: 0;
+    margin-bottom: 24px;
+    margin-top: 40px;
+    margin-left: -16px;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+
+    @media (min-width: $desktop) {
+      margin-left: -32px;
+      margin-top: 0;
+    }
+
+    &::before {
+      content: '';
+      height: 40px;
+      border: 2px solid #41F6D7;
+      margin-right: 12px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+  
+      @media (min-width: $tablet) {
+        margin-right: 20px;
+      }
+  
+      @media (min-width: $desktop) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  // .sideForm__input
+
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    height: 48px;
+    width: 288px;
+    margin-bottom: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    padding-block: 12px;
+    padding-inline: 16px;
+
+    &::placeholder {
+      color: #B5B6BC;
+    }
+
+    @media (min-width: $desktop) {
+      width: 376px;
+    }
+  }
+
+  // .sideForm__textArea
+  
+  &__textArea {
+    box-sizing: border-box;
+    display: block;
+    height: 48px;
+    width: 288px;
+    margin-bottom: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    padding-block: 12px;
+    padding-inline: 16px;
+    height: 118px;
+    width: 288px;
+
+    &::placeholder {
+      color: #B5B6BC;
+    }
+
+    @media (min-width: $desktop) {
+      width: 376px;
+    }
+  }
+  
+  // .sideForm__policy
+
+  &__policy {
+    margin-bottom: 19px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #555558;
+  }
+
+  // .sideForm__anchor
+
+  &__anchor {
+    color: #FF3E79;
+  }
+
+  // .sideForm__submit
+
+  &__submit {
+    width: 136px;
+    height: 32px;
+    background: #FF3E79;
+    color: #FFFFFF;
+    float: right;
+    border: 0;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    font-weight: 600;
+  }
+}

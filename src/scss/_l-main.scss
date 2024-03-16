@@ -30,24 +30,25 @@
     @media (min-width: $desktop) {
       margin: 0;
     }
+
+    &::before {
+      content: '';
+      height: 40px;
+      border: 2px solid #41F6D7;
+      margin-right: 12px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+  
+      @media (min-width: $tablet) {
+        margin-right: 20px;
+      }
+  
+      @media (min-width: $desktop) {
+        margin-right: 20px;
+      }
+    }
   }
 
-  &__h1::before {
-    content: '';
-    height: 40px;
-    border: 2px solid #41F6D7;
-    margin-right: 12px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-
-    @media (min-width: $tablet) {
-      margin-right: 20px;
-    }
-
-    @media (min-width: $desktop) {
-      margin-right: 20px;
-    }
-  }
 
   // .l-main__slider
 
@@ -120,8 +121,8 @@
   &__desktopText {
     display: none;
 
-    @media (min-width: $tablet) {
-      display: block;
+    @media (min-width: $desktop) {
+      display: inline;
       margin-top: 0;
       margin-bottom: 14px;
       font-size: 14px;
