@@ -1,5 +1,6 @@
 .expandable {
   padding: 8px 24px 34px 24px;
+  font-size: 0;
 
   @media (min-width: $desktop) {
     padding: 8px 32px 34px 32px;
@@ -47,12 +48,25 @@
     @media (min-width: $desktop) {
       width: 240px;
     }
-  }
 
-  // .expandable__icon
-
-  &__icon {
-    display: block;
+    &--high {
+      width: 224px;
+      height: 160px;
+      display: grid;
+      align-items: flex-start;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 40px;
+      text-align: left;
+      color: #1B1C21;
+      font-family: 'TT Lakes';
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+  
+      @media (min-width: $desktop) {
+        width: 240px;
+      }
+    }
   }
 
   // .expandable__button
@@ -61,7 +75,7 @@
     line-height: 24px;
     vertical-align: center;
     font-size: 16px;
-    font-family: TT Lakes;
+    font-family: 'TT Lakes';
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.2px;
@@ -82,5 +96,13 @@
     margin: 0;
     font-weight: 600;
     letter-spacing: -0.2px;
+  }
+
+  // .expandable__icon
+
+  &__icon {
+    justify-self: end;
+    font-size: 0;
+    line-height: 0;
   }
 }

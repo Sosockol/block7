@@ -19,7 +19,9 @@
 
   // .l-info__swiper
 
-  &__swiper {}
+  &__swiper {
+    overflow: hidden;
+  }
 
   // .l-info__expandable
 

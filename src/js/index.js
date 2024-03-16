@@ -4,7 +4,7 @@ import { Pagination } from 'swiper/modules';
 
 const hideClass = 'visually-hidden';
 
-let swiperObj = new Swiper('.mySwiper', {
+let swiperObj = new Swiper('.swiper', {
   modules: [Pagination],
   pagination: {
     el: '.swiper-pagination',
@@ -26,36 +26,63 @@ let swiperObj = new Swiper('.mySwiper', {
   }
 });
 
-const expandable = document.querySelector('.l-info__expandable');
+let secondSwiper = new Swiper('.swiper2', {
+  modules: [Pagination],
+  pagination: {
+    el: '.swiper-pagination2',
+    clickable: true,
+  },
+
+  slidesPerView: 'auto',
+
+  on: {
+    resize: function enableOnlyMobile(swiper) {
+      if (768 < window.innerWidth) {
+        swiper.disable();
+        swiper.el.classList.add(hideClass);
+      } else {
+        swiper.enable();
+        swiper.el.classList.remove(hideClass);
+      }
+    }
+  }
+});
+
+let expandable = document.querySelectorAll('.l-info__expandable');
 
 document.addEventListener('DOMContentLoaded', function () {
   if (768 > window.screen.width) {
     swiperObj.el.classList.remove(hideClass);
+    secondSwiper.el.classList.remove(hideClass);
   }
 
 
   if (768 <= window.screen.width) {
-    expandable.classList.remove(hideClass);
+    expandable[0].classList.remove(hideClass);
+    expandable[1].classList.remove(hideClass);
   }
 });
 
 window.addEventListener('resize', () => {
   if (768 > window.screen.width) {
     swiperObj.el.classList.remove(hideClass);
-    expandable.classList.add(hideClass);
+    expandable[0].classList.add(hideClass);
+    expandable[1].classList.add(hideClass);
   }
 
 
   if (768 <= window.screen.width) {
-    expandable.classList.remove(hideClass);
+    expandable[0].classList.remove(hideClass);
+    expandable[1].classList.remove(hideClass);
     swiperObj.el.classList.add(hideClass);
+    secondSwiper.el.classList.add(hideClass);
   }
 });
 
-const expandButton = expandable.querySelector('.expandable__button');
-const expandList = expandable.firstElementChild;
-const buttonParagraph = expandButton.lastElementChild;
-const expandArrow = expandButton.firstElementChild;
+let expandButton = expandable[0].querySelector('.expandable__button');
+let expandList = expandable[0].firstElementChild;
+let buttonParagraph = expandButton.lastElementChild;
+let expandArrow = expandButton.firstElementChild;
 
 
 expandButton.addEventListener('click', () => {
@@ -71,6 +98,26 @@ expandButton.addEventListener('click', () => {
   }
 });
 
+expandButton = expandable[1].querySelector('.expandable__button');
+expandList = expandable[1].firstElementChild;
+buttonParagraph = expandButton.lastElementChild;
+expandArrow = expandButton.firstElementChild;
+
+
+expandButton.addEventListener('click', () => {
+  let buttonText = buttonParagraph.textContent;
+  if (buttonText == 'Показать все') {
+    buttonParagraph.textContent = 'Свернуть';
+    expandArrow.style.transform = 'rotate(180deg)';
+    expandList.style.height = 'auto';
+  } else {
+    buttonParagraph.textContent = 'Показать все';
+    expandArrow.style.transform = 'rotate(0deg)';
+    expandList.style.height = '160px';
+  }
+});
+
+// Burger menu
 const leftMenu = document.querySelector('.l-desktopContainer .l-sideMenu');
 
 document.addEventListener('DOMContentLoaded', function () {
