@@ -79,43 +79,29 @@ window.addEventListener('resize', () => {
   }
 });
 
-let expandButton = expandable[0].querySelector('.expandable__button');
-let expandList = expandable[0].firstElementChild;
-let buttonParagraph = expandButton.lastElementChild;
-let expandArrow = expandButton.firstElementChild;
+function setExpandButton(expand) {
+  const expandButton = expand.querySelector('.expandable__button');
+  const expandList = expand.firstElementChild;
+  const buttonParagraph = expandButton.lastElementChild;
+  const expandArrow = expandButton.firstElementChild;
 
+  expandButton.addEventListener('click', () => {
+    let buttonText = buttonParagraph.textContent;
+    if (buttonText == 'Показать все') {
+      buttonParagraph.textContent = 'Свернуть';
+      expandArrow.style.transform = 'rotate(180deg)';
+      expandList.style.height = 'auto';
+    } else {
+      buttonParagraph.textContent = 'Показать все';
+      expandArrow.style.transform = 'rotate(0deg)';
+      expandList.style.height = '160px';
+    }
+  });
+}
 
-expandButton.addEventListener('click', () => {
-  let buttonText = buttonParagraph.textContent;
-  if (buttonText == 'Показать все') {
-    buttonParagraph.textContent = 'Свернуть';
-    expandArrow.style.transform = 'rotate(180deg)';
-    expandList.style.height = 'auto';
-  } else {
-    buttonParagraph.textContent = 'Показать все';
-    expandArrow.style.transform = 'rotate(0deg)';
-    expandList.style.height = '160px';
-  }
-});
+setExpandButton(expandable[0]);
+setExpandButton(expandable[1]);
 
-expandButton = expandable[1].querySelector('.expandable__button');
-expandList = expandable[1].firstElementChild;
-buttonParagraph = expandButton.lastElementChild;
-expandArrow = expandButton.firstElementChild;
-
-
-expandButton.addEventListener('click', () => {
-  let buttonText = buttonParagraph.textContent;
-  if (buttonText == 'Показать все') {
-    buttonParagraph.textContent = 'Свернуть';
-    expandArrow.style.transform = 'rotate(180deg)';
-    expandList.style.height = 'auto';
-  } else {
-    buttonParagraph.textContent = 'Показать все';
-    expandArrow.style.transform = 'rotate(0deg)';
-    expandList.style.height = '160px';
-  }
-});
 
 // Burger menu
 const leftMenu = document.querySelector('.l-desktopContainer .l-sideMenu');
