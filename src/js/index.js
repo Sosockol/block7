@@ -4,7 +4,7 @@ import { Pagination } from 'swiper/modules';
 
 const hideClass = 'visually-hidden';
 
-let swiperObj = new Swiper('.swiper', {
+let firstSwiper = new Swiper('.swiper', {
   modules: [Pagination],
   pagination: {
     el: '.swiper-pagination',
@@ -48,11 +48,33 @@ let secondSwiper = new Swiper('.swiper2', {
   }
 });
 
+let thirdSwiper = new Swiper('.swiper3', {
+  modules: [Pagination],
+  pagination: {
+    el: '.swiper-pagination3',
+    clickable: true,
+  },
+
+  slidesPerView: 'auto',
+
+  on: {
+    resize: function enableOnlyMobile(swiper) {
+      if (768 < window.innerWidth) {
+        swiper.disable();
+        swiper.el.classList.add(hideClass);
+      } else {
+        swiper.enable();
+        swiper.el.classList.remove(hideClass);
+      }
+    }
+  }
+});
+
 let expandable = document.querySelectorAll('.l-info__expandable');
 
 document.addEventListener('DOMContentLoaded', function () {
   if (768 > window.screen.width) {
-    swiperObj.el.classList.remove(hideClass);
+    firstSwiper.el.classList.remove(hideClass);
     secondSwiper.el.classList.remove(hideClass);
   }
 
@@ -65,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('resize', () => {
   if (768 > window.screen.width) {
-    swiperObj.el.classList.remove(hideClass);
+    firstSwiper.el.classList.remove(hideClass);
     expandable[0].classList.add(hideClass);
     expandable[1].classList.add(hideClass);
   }
@@ -74,7 +96,7 @@ window.addEventListener('resize', () => {
   if (768 <= window.screen.width) {
     expandable[0].classList.remove(hideClass);
     expandable[1].classList.remove(hideClass);
-    swiperObj.el.classList.add(hideClass);
+    firstSwiper.el.classList.add(hideClass);
     secondSwiper.el.classList.add(hideClass);
   }
 });
