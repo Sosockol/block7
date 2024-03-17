@@ -71,7 +71,7 @@
   &__cross {
     @media (min-width: $desktop) {
       position: absolute;
-      transform: translateX(-100px);
+      left: -80px;
     }
   }
 

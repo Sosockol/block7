@@ -9,6 +9,10 @@
   color: $text;
   font-size: 0px;
 
+  &:hover {
+    transform: scale(0.9);
+  }
+
   // .defaultButton__name
 
   &__name {
