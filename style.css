@@ -587,6 +587,26 @@ template {
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important; }
 
+.defaultButton {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer; }
+  .defaultButton:hover {
+    transform: scale(0.9); }
+  .defaultButton__name {
+    display: inline-block;
+    margin: 0;
+    margin-right: 8px;
+    font-size: 16px; }
+  .defaultButton__icon {
+    display: inline-block;
+    font-size: 16px; }
+  .defaultButton__arrow {
+    color: #FF3E79; }
+
 /**
  * Swiper 11.0.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -807,25 +827,6 @@ template {
     transform: rotate(360deg); } }
 
 /* Slide styles end */
-.defaultButton {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  font-family: 'TT Lakes', sans-serif;
-  color: #1B1C21;
-  font-size: 0px; }
-  .defaultButton__name {
-    display: inline-block;
-    margin: 0;
-    margin-right: 8px;
-    font-size: 16px; }
-  .defaultButton__icon {
-    display: inline-block;
-    font-size: 16px; }
-
 .desktopHeader {
   font-family: 'TT Lakes', sans-serif;
   color: #1B1C21;
@@ -1160,6 +1161,48 @@ template {
     background: linear-gradient(90deg, rgba(248, 248, 248, 0.1) 0%, rgba(248, 248, 248, 0.5) 20%, #f8f8f8 100%); }
     .swiper__fader--large {
       height: 169px; }
+  .swiper__order {
+    width: 136px;
+    height: 32px;
+    background: #FF3E79;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    white-space: pre; }
+  .swiper__pricing {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .swiper__h3 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+    color: #7E7E82; }
+  .swiper__price {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #1B1C21;
+    margin: 0;
+    padding: 0; }
+  .swiper__content {
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0; }
   .swiper__slide--high {
     height: 160px;
     width: 240px;
@@ -1173,6 +1216,10 @@ template {
     line-height: 24px;
     letter-spacing: -0.2px;
     text-align: left; }
+  .swiper__slide--height--200 {
+    height: 200px;
+    width: 260px;
+    display: block; }
   .swiper__icon--bottom {
     display: block;
     justify-self: end;
@@ -1191,6 +1238,12 @@ template {
   text-align: center !important;
   margin-top: 16px !important; }
 
+.swiper-pagination3 {
+  text-align: center !important;
+  margin-top: 16px !important;
+  margin-right: auto;
+  margin-left: auto; }
+
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -1201,7 +1254,10 @@ template {
   margin: 0 !important; }
 
 .swiper2 {
-  padding-right: 24px; }
+  padding-right: 10vw; }
+
+.swiper3 {
+  padding-right: 10vw; }
 
 .expandable {
   padding: 8px 24px 34px 24px;
@@ -1278,6 +1334,110 @@ template {
     justify-self: end;
     font-size: 0;
     line-height: 0; }
+
+.priceTable {
+  text-align: left;
+  background-color: #F8F8F8;
+  font-family: 'TT Lakes', sans-serif;
+  color: #1B1C21;
+  font-size: 16px;
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  padding-inline: 24px; }
+  .priceTable__wrapper {
+    padding: 0px 24px 24px 24px; }
+  .priceTable__header {
+    padding-top: 24px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: #7E7E82;
+    font-weight: normal; }
+  .priceTable__body {
+    background-color: white;
+    color: #1B1C21;
+    border-radius: 10px; }
+  .priceTable__cell {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    padding-block: 23px; }
+  .priceTable__firstColumn {
+    width: 350px;
+    padding-inline-start: 16px; }
+  .priceTable__secondColumn {
+    width: 75px;
+    padding-inline: 0; }
+  .priceTable__thirdColumn {
+    width: 80px;
+    padding-inline: 0; }
+  .priceTable__fourthColumn {
+    width: 120px;
+    padding-inline-end: 16px;
+    text-align: right; }
+  .priceTable__button {
+    width: 119px;
+    height: 32px;
+    background: #FF3E79;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    font-weight: 600;
+    white-space: pre; }
+
+.footer {
+  text-align: center;
+  color: #7E7E82;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  background-color: #F8F8F8;
+  display: block;
+  padding: 4px;
+  padding-bottom: 19px; }
+  @media (min-width: 768px) {
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      padding: 24px; } }
+  .footer__paragraph {
+    padding: 0;
+    margin: 0;
+    white-space: pre-wrap;
+    margin-bottom: 16px; }
+    @media (min-width: 768px) {
+      .footer__paragraph {
+        text-align: left;
+        max-width: 218px; }
+        .footer__paragraph:last-child {
+          text-align: right; } }
+    @media (min-width: 1440px) {
+      .footer__paragraph {
+        max-width: 330px; } }
+
+.disclaimer {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  max-width: 420px;
+  margin-top: 24px;
+  color: #1B1C21; }
+  .disclaimer__button {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #1B1C21;
+    font-weight: 500;
+    margin-top: 16px; }
 
 .l-header {
   padding: 24px 16px;
@@ -1464,7 +1624,7 @@ template {
   @media (min-width: 1440px) {
     .l-sideMenu__cross {
       position: absolute;
-      transform: translateX(-100px); } }
+      left: -80px; } }
   .l-sideMenu--right {
     left: auto;
     right: 0;
@@ -1494,7 +1654,7 @@ template {
   .l-desktopContainer {
     display: flex;
     justify-content: center;
-    height: 5000px; } }
+    height: 100%; } }
 
 .l-info__title {
   display: block;
@@ -1570,7 +1730,8 @@ template {
     padding-block: 12px;
     padding-inline: 16px;
     height: 118px;
-    width: 288px; }
+    width: 288px;
+    resize: none; }
     .sideForm__textArea::-moz-placeholder {
       color: #B5B6BC; }
     .sideForm__textArea::placeholder {
@@ -1600,6 +1761,9 @@ template {
     letter-spacing: -0.1px;
     text-align: center;
     font-weight: 600; }
+
+body {
+  overflow-x: hidden; }
 
 
 /*# sourceMappingURL=style.css.map*/
