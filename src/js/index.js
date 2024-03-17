@@ -70,34 +70,42 @@ let thirdSwiper = new Swiper('.swiper3', {
   }
 });
 
-let expandable = document.querySelectorAll('.l-info__expandable');
+const expandable = document.querySelectorAll('.l-info__expandable');
+const table = document.querySelector('.priceTable');
 
 document.addEventListener('DOMContentLoaded', function () {
   if (768 > window.screen.width) {
     firstSwiper.el.classList.remove(hideClass);
     secondSwiper.el.classList.remove(hideClass);
+    thirdSwiper.el.classList.remove(hideClass);
   }
-
 
   if (768 <= window.screen.width) {
     expandable[0].classList.remove(hideClass);
     expandable[1].classList.remove(hideClass);
+    table.classList.remove(hideClass);
   }
 });
 
 window.addEventListener('resize', () => {
   if (768 > window.screen.width) {
     firstSwiper.el.classList.remove(hideClass);
+    secondSwiper.el.classList.remove(hideClass);
+    thirdSwiper.el.classList.remove(hideClass);
+
     expandable[0].classList.add(hideClass);
     expandable[1].classList.add(hideClass);
+    table.classList.add(hideClass);
   }
-
 
   if (768 <= window.screen.width) {
     expandable[0].classList.remove(hideClass);
     expandable[1].classList.remove(hideClass);
+    table.classList.remove(hideClass);
+
     firstSwiper.el.classList.add(hideClass);
     secondSwiper.el.classList.add(hideClass);
+    thirdSwiper.el.classList.add(hideClass);
   }
 });
 

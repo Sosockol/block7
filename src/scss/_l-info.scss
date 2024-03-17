@@ -23,7 +23,8 @@
     overflow: hidden;
   }
 
-  // .l-info__expandable
 
-  &__expandable {}
+  &--withTable {
+    padding: 0px 24px 24px 24px;
+  }
 }

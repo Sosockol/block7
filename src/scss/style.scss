@@ -1,13 +1,13 @@
 @import './fontFace',
 './variables',
 './visually-hidden',
+'./defaultButton',
 '../../node_modules/swiper/swiper',
 '../../node_modules/swiper/modules/pagination.css',
 '../../node_modules/normalize.css/normalize.css';
 
 
-@import './defaultButton',
-'./desktopHeader',
+@import './desktopHeader',
 './navbar',
 './slider',
 './menuList',
@@ -15,7 +15,10 @@
 './contactsList',
 './iconList',
 './swipable',
-'./expandable';
+'./expandable',
+'./priceTable',
+'./footer',
+'./disclaimer';
 
 @import './l-header',
 './l-main',

@@ -5,9 +5,6 @@
   color: inherit;
   background-color: transparent;
   cursor: pointer;
-  font-family: 'TT Lakes', sans-serif;
-  color: $text;
-  font-size: 0px;
 
   &:hover {
     transform: scale(0.9);
@@ -28,4 +25,10 @@
     display: inline-block;
     font-size: 16px;
   }
+
+    // .defaultButton__arrow
+
+    &__arrow {
+      color: #FF3E79;
+    }
 }
