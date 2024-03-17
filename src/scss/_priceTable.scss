@@ -9,6 +9,10 @@
   border-collapse: collapse;
   padding-inline: 24px;
 
+  &__wrapper {
+    padding: 0px 24px 24px 24px;
+  }
+
   &__header {
     padding-top: 24px;
     font-size: 14px;

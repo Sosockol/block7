@@ -26,3 +26,7 @@
 './l-desktopContainer',
 './l-info.scss',
 './l-sideForm';
+
+body {
+  overflow-x: hidden;
+}

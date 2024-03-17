@@ -6,11 +6,14 @@
   letter-spacing: 0px;
   background-color: $mainBg;
   display: block;
+  padding: 4px;
+  padding-bottom: 19px;
 
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    padding: 24px;
   }
   // .footer__paragraph
 
@@ -22,15 +25,15 @@
   
     @media (min-width: $tablet) {
       text-align: left;
-      max-width: 330px;
-
-      
+      max-width: 218px;
 
       &:last-child {
         text-align: right;
       }
     }
 
-
+    @media (min-width: $desktop) {
+      max-width: 330px;
+    }
   }
 }
