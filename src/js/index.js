@@ -4,10 +4,10 @@ import { Pagination } from 'swiper/modules';
 
 const hideClass = 'visually-hidden';
 
-let firstSwiper = new Swiper('.swiper', {
+let firstSwiper = new Swiper('.swiper1', {
   modules: [Pagination],
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper__pagination1',
     clickable: true,
   },
 
@@ -29,7 +29,7 @@ let firstSwiper = new Swiper('.swiper', {
 let secondSwiper = new Swiper('.swiper2', {
   modules: [Pagination],
   pagination: {
-    el: '.swiper-pagination2',
+    el: '.swiper__pagination2',
     clickable: true,
   },
 
@@ -51,7 +51,7 @@ let secondSwiper = new Swiper('.swiper2', {
 let thirdSwiper = new Swiper('.swiper3', {
   modules: [Pagination],
   pagination: {
-    el: '.swiper-pagination3',
+    el: '.swiper__pagination3',
     clickable: true,
   },
 
@@ -71,7 +71,7 @@ let thirdSwiper = new Swiper('.swiper3', {
 });
 
 const expandable = document.querySelectorAll('.info__expandable');
-const table = document.querySelector('.priceTable');
+const table = document.querySelector('.priceTable__wrapper');
 
 document.addEventListener('DOMContentLoaded', function () {
   if (768 > window.screen.width) {

@@ -1,12 +1,17 @@
 .disclaimer {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  text-align: left;
-  max-width: 420px;
-  margin-top: 24px;
-  
-  color: #1B1C21;
+  padding: 0px 24px 24px 24px;
+  // .disclaimer__paragraph
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    max-width: 420px;
+    margin-top: 24px;
+    color: #1B1C21;
+    margin: 0;
+  }
 
   // .disclaimer__button
 

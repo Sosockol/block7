@@ -226,8 +226,8 @@
         <!-- Swipery -->
         <section class="info">
           <h2 class="info__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
-          <nav class="swiper mySwiper info__swiper visually-hidden">
-            <ul class="swiper-wrapper">
+          <nav class="swiper swiper1 info__swiper visually-hidden">
+            <ul class="swiper-wrapper swiper__wrapper">
               <li class="swiper-slide swiper__slide">
                 <img class="swiper__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
                 <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
@@ -265,7 +265,7 @@
                 <button class='defaultButton' type='button'><img class="swiper__icon" src="./img/goNext.svg" alt="Подробности"></button>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper__pagination swiper__pagination1"></div>
             <div class="swiper__fader"></div>
           </nav>
           
@@ -332,8 +332,8 @@
         <!-- Swipery 2 -->
         <section class="info">
           <h2 class="info__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
-          <nav class="swiper2 info__swiper visually-hidden">
-            <ul class="swiper-wrapper">
+          <nav class="swiper swiper2 info__swiper visually-hidden">
+            <ul class="swiper-wrapper swiper__wrapper">
               <li class="swiper-slide swiper__slide swiper__slide--high">Ремонт ноутбуков
                 <button class='defaultButton swiper__icon' type='button'><img src="./img/goNext.svg" alt="Подробности"></button>
               </li>
@@ -362,7 +362,7 @@
                 <button class='defaultButton swiper__icon' type='button'><img src="./img/goNext.svg" alt="Подробности"></button>
               </li>
             </ul>
-            <div class="swiper-pagination2"></div>
+            <div class="swiper__pagination swiper__pagination2"></div>
             <div class="swiper__fader swiper__fader--large"></div>
           </nav>
           
@@ -408,8 +408,8 @@
         <!-- Swipery 3 -->
         <section class="info">
           <h2 class="info__title">ЦЕНЫ НА УСЛУГИ</h2>
-          <nav class="swiper3 info__swiper visually-hidden">
-            <ul class="swiper-wrapper">
+          <nav class="swiper swiper3 info__swiper visually-hidden">
+            <ul class="swiper-wrapper swiper__wrapper">
               <li class="swiper-slide swiper__slide swiper__slide--height--200">
                 <ul class="swiper__pricing">
                   <li class="swiper__content">
@@ -493,15 +493,15 @@
                     <p class="swiper__price">30-120 мин</p>
                   </li>
                 </ul>
-                <button class="defaultButton swiper__order">ЗАКАЗАТЬ          &#x276F;/button>
+                <button class="defaultButton swiper__order">ЗАКАЗАТЬ          &#x276F;</button>
               </li>
             </ul>
-            <div class="swiper-pagination3"></div>
+            <div class="swiper__pagination swiper__pagination3"></div>
             <div class="swiper__fader swiper__fader--large"></div>
           </nav>
           
-          <div class="priceTable__wrapper">
-          <table class="priceTable visually-hidden">
+          <div class="priceTable__wrapper visually-hidden">
+          <table class="priceTable">
               <tr class="priceTable__header">
                 <td>Ремонтные услуги</td>
                 <td>Цена</td>
@@ -541,7 +541,9 @@
               </tr>
             </tbody>
           </table>
-          <p class="disclaimer">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+        </div>
+        <div class="disclaimer">
+          <p class="disclaimer__paragraph">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
             <button class="disclaimer__button defaultButton">Получить коммерческое предложение    <span class="defaultButton__arrow">&#x276F;</span></button>
           </p>
         </div>
