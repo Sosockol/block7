@@ -6,14 +6,14 @@
   font-size: 16px;
   width: 100%;
   border-spacing: 0px;
-  border-collapse: collapse;
 
   &__wrapper {
     padding: 0px 24px 24px 24px;
   }
 
   &__header {
-    padding-top: 24px;
+    padding-top: 15px;
+    padding-bottom: 16px;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0px;
@@ -24,7 +24,7 @@
   &__body {
     background-color: white;
     color: #1B1C21;
-    border-radius: 10px;
+    overflow: hidden;
   }
 
   &__cell {
@@ -63,6 +63,22 @@
   tr:last-child .priceTable__cell::after {
     border: none;
   }
+
+  tr:nth-child(1) &__cell:first-child {
+    border-top-left-radius: 10px;
+  } 
+
+  tr:last-child &__cell:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  tr:nth-child(1) &__cell:last-child {
+    border-top-right-radius: 10px;
+  } 
+
+  tr:last-child &__cell:last-child {
+    border-bottom-right-radius: 10px;
+  } 
 
   &__firstColumn {
     width: 350px;
