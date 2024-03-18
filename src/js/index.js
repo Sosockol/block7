@@ -70,7 +70,7 @@ let thirdSwiper = new Swiper('.swiper3', {
   }
 });
 
-const expandable = document.querySelectorAll('.l-info__expandable');
+const expandable = document.querySelectorAll('.info__expandable');
 const table = document.querySelector('.priceTable');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -134,7 +134,7 @@ setExpandButton(expandable[1]);
 
 
 // Burger menu
-const leftMenu = document.querySelector('.l-desktopContainer .l-sideMenu');
+const leftMenu = document.querySelector('.desktopContainer .sideMenu');
 
 document.addEventListener('DOMContentLoaded', function () {
   if (1440 <= window.screen.width) {
@@ -169,7 +169,7 @@ cross.addEventListener('click', () => {
 
 const repairButton = document.querySelector('.navbar__repair');
 const repairButton2 = document.querySelector('.desktopHeader__repair');
-const rightBars = document.querySelectorAll('.l-sideMenu--right');
+const rightBars = document.querySelectorAll('.sideMenu--right');
 
 repairButton.addEventListener('click', () => {
   document.body.style = 'overflow: hidden;';
@@ -196,8 +196,8 @@ checkStatusButton2.addEventListener('click', () => {
   shadow.classList.remove(hideClass);
 });
 
-const rightBarsCross = rightBars[0].querySelector('.l-sideMenu__cross');
-const rightBarsCross2 = rightBars[1].querySelector('.l-sideMenu__cross');
+const rightBarsCross = rightBars[0].querySelector('.sideMenu__cross');
+const rightBarsCross2 = rightBars[1].querySelector('.sideMenu__cross');
 rightBarsCross.addEventListener('click', () => {
   document.body.style = '';
   rightBars[0].classList.add(hideClass);
