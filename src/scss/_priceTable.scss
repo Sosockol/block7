@@ -7,7 +7,6 @@
   width: 100%;
   border-spacing: 0px;
   border-collapse: collapse;
-  padding-inline: 24px;
 
   &__wrapper {
     padding: 0px 24px 24px 24px;
@@ -33,6 +32,36 @@
     line-height: 18px;
     letter-spacing: 0.2px;
     padding-block: 23px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    &:first-child::after {
+      content: "";
+      position: absolute;
+      left: 16px;
+      bottom: 0;
+      right: 0;
+    }
+
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 16px;
+    }
+  }
+
+  tr:last-child .priceTable__cell::after {
+    border: none;
   }
 
   &__firstColumn {
