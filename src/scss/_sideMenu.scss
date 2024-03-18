@@ -1,4 +1,4 @@
-.l-sideMenu {
+.sideMenu {
   font-family: 'TT Lakes';
   box-sizing: border-box;
   position: fixed;
@@ -29,7 +29,7 @@
     z-index: 100;
   }
 
-  // .l-sideMenu__stickyFlexBox
+  // .sideMenu__stickyFlexBox
 
   &__stickyFlexBox {
     height: 100%;
@@ -48,7 +48,7 @@
     }
   }
 
-  // .l-sideMenu__header
+  // .sideMenu__header
 
   &__header {
     margin-bottom: 20px;
@@ -62,7 +62,7 @@
     }
   }
 
-  // .l-sideMenu__list
+  // .sideMenu__list
 
   &__menuList {
     margin-bottom: 20px;

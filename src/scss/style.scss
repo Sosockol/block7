@@ -6,6 +6,12 @@
 '../../node_modules/swiper/modules/pagination.css',
 '../../node_modules/normalize.css/normalize.css';
 
+@import './header',
+'./main',
+'./sideMenu',
+'./desktopContainer',
+'./info.scss',
+'./sideForm';
 
 @import './desktopHeader',
 './navbar',
@@ -19,13 +25,6 @@
 './priceTable',
 './footer',
 './disclaimer';
-
-@import './l-header',
-'./l-main',
-'./l-sideMenu',
-'./l-desktopContainer',
-'./l-info.scss',
-'./l-sideForm';
 
 body {
   overflow-x: hidden;

@@ -13,8 +13,8 @@
   <body>
     <div class="desktopShadow visually-hidden"></div>
     <!-- Шапка для телефона/планшета -->
-    <header class="l-header">
-      <nav class="l-header__navbar navbar">
+    <header class="header">
+      <nav class="header__navbar navbar">
         <ul class="navbar__left">
           <li class="navbar__menu">
             <button class='defaultButton burger' type="button">
@@ -58,11 +58,11 @@
     <!-- Конец Шапки -->
     
     <!-- Правые формы -->
-    <aside class="l-sideMenu l-sideMenu--right visually-hidden">
-        <button class='l-sideMenu__cross defaultButton defaultButton__icon'>
+    <aside class="sideMenu sideMenu--right visually-hidden">
+        <button class='sideMenu__cross defaultButton defaultButton__icon'>
           <img src="./img/cross.svg" alt="Закрыть">
         </button>
-        <form action="" method="post" class="l-sideMenu__form sideForm">
+        <form action="" method="post" class="sideMenu__form sideForm">
         <h1 class="sideForm__h1">Обратная связь</h1>
         <input type="text" autocomplete="given-name" class="sideForm__input" required minlength="2" maxlength="10" size="10" placeholder="Имя">
         <input type="tel" id="phone" name="phone" class="sideForm__input" required placeholder="Телефон">
@@ -73,12 +73,12 @@
       </form>
     </aside>
 
-    <aside class="l-sideMenu l-sideMenu--right visually-hidden">
+    <aside class="sideMenu sideMenu--right visually-hidden">
       
-      <button class='l-sideMenu__cross defaultButton defaultButton__icon'>
+      <button class='sideMenu__cross defaultButton defaultButton__icon'>
         <img src="./img/cross.svg" alt="Закрыть">
       </button>
-      <form action="" method="post" class="l-sideMenu__form sideForm">
+      <form action="" method="post" class="sideMenu__form sideForm">
       <h1 class="sideForm__h1">Заказать звонок</h1>
       <input type="tel" id="phone" name="phone" class="sideForm__input" required placeholder="Телефон">
       <p class="sideForm__policy">Нажимая “отправить”, вы даете согласие на <a class='sideForm__anchor'>обработку персональных данных</a> и соглашаетесь с нашей <a class="sideForm__anchor">политикой конфиденциальности</a></p>
@@ -87,13 +87,13 @@
   </aside>
 
   <!-- Боковая Менюшка -->
-    <div class="l-desktopContainer">
-      <aside class="l-sideMenu visually-hidden">
-        <div class="l-sideMenu__stickyFlexBox">
-          <div class="l-sideMenu__top">
+    <div class="desktopContainer">
+      <aside class="sideMenu visually-hidden">
+        <div class="sideMenu__stickyFlexBox">
+          <div class="sideMenu__top">
             <!-- Шапка меню -->
-            <header class="l-sideMenu__header">
-              <nav class="l-header__navbar navbar navbar--leftOnly">
+            <header class="sideMenu__header">
+              <nav class="header__navbar navbar navbar--leftOnly">
                 <ul class="navbar__left">
                   <li class="navbar__cross">
                     <button class='defaultButton' type="button">
@@ -114,7 +114,7 @@
               </nav>
             </header>
             <!-- Список Навигации -->
-            <ul class="l-sideMenu__menuList menuList">
+            <ul class="sideMenu__menuList menuList">
               <li class="menuList__item"><a>Ремонт техники</a></li>
               <li class="menuList__item"><a>Услуги и сервисы</a></li>
               <li class="menuList__item"><a>Корпоративным клиентам</a></li>
@@ -125,9 +125,9 @@
               <li class="menuList__item"><a>Контакты</a></li>
             </ul>
           </div>
-          <div class="l-sideMenu__bottom">
+          <div class="sideMenu__bottom">
             <!-- Подвал меню -->
-            <footer class="l-sideMenu__footer sideFooter">
+            <footer class="sideMenu__footer sideFooter">
               <ul class="sideFooter__iconList iconList">
                 <li class="iconList__call">
                   <button class='defaultButton' type="button">
@@ -164,10 +164,10 @@
 
 
       <!-- Начало основной страницы -->
-      <main class="l-main">
+      <main class="main">
         <!-- Шапка для Десктопа -->
-        <header class="l-main__desktopHeader desktopHeader">
-          <h1 class="l-main__h1 desktopHeader__h1">Услуги и сервисы</h1>
+        <header class="main__desktopHeader desktopHeader">
+          <h1 class="main__h1 desktopHeader__h1">Услуги и сервисы</h1>
           <ul class="desktopHeader__list">
             <li class="desktopHeader__repair">
               <button class='desktopHeader__button defaultButton' type="button">
@@ -184,7 +184,7 @@
           </ul>
         </header>
         <!-- Слайдер -->
-        <nav class="l-main__slider slider">
+        <nav class="main__slider slider">
           <ul class="slider__list">
             <li class="slider__item">
               <a class="slider__link">Ремонтируемые устройства</a>
@@ -208,14 +208,14 @@
           </ul>
         </nav>
         <!-- Текстовая часть -->
-        <section class="l-main__section">
-          <article class="l-main__article">
-            <p class="l-main__p1">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-            <p class="l-main__p2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class='l-main__desktopText'>, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-            <button class='l-main__expandButton defaultButton' type="button"><p class="l-main__readNext">Читать далее</p></button>
+        <section class="main__section">
+          <article class="main__article">
+            <p class="main__p1">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <p class="main__p2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class='main__desktopText'>, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+            <button class='main__expandButton defaultButton' type="button"><p class="main__readNext">Читать далее</p></button>
           </article>
-          <div class="l-main__pictureWraper">
-            <img class="l-main__picture" alt="Логотип компании CPS" src="./img/Picture Copy.png">
+          <div class="main__pictureWraper">
+            <img class="main__picture" alt="Логотип компании CPS" src="./img/Picture Copy.png">
           </div>
         </section>
         <!-- End of first section -->
@@ -224,9 +224,9 @@
 
 
         <!-- Swipery -->
-        <section class="l-info">
-          <h2 class="l-info__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
-          <nav class="swiper mySwiper l-info__swiper visually-hidden">
+        <section class="info">
+          <h2 class="info__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
+          <nav class="swiper mySwiper info__swiper visually-hidden">
             <ul class="swiper-wrapper">
               <li class="swiper-slide swiper__slide">
                 <img class="swiper__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
@@ -269,7 +269,7 @@
             <div class="swiper__fader"></div>
           </nav>
           
-          <nav class="expandable l-info__expandable visually-hidden">
+          <nav class="expandable info__expandable visually-hidden">
             <ul class="expandable__list">
               <li class="expandable__item">
                 <img class="expandable__icon" src="./img/Lenovo.png" alt="Партнер Lenovo">
@@ -330,9 +330,9 @@
 
 
         <!-- Swipery 2 -->
-        <section class="l-info">
-          <h2 class="l-info__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
-          <nav class="swiper2 l-info__swiper visually-hidden">
+        <section class="info">
+          <h2 class="info__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
+          <nav class="swiper2 info__swiper visually-hidden">
             <ul class="swiper-wrapper">
               <li class="swiper-slide swiper__slide swiper__slide--high">Ремонт ноутбуков
                 <button class='defaultButton swiper__icon' type='button'><img src="./img/goNext.svg" alt="Подробности"></button>
@@ -366,7 +366,7 @@
             <div class="swiper__fader swiper__fader--large"></div>
           </nav>
           
-          <nav class="expandable l-info__expandable visually-hidden">
+          <nav class="expandable info__expandable visually-hidden">
             <ul class="expandable__list">
               <li class="expandable__item expandable__item--high">Ремонт ноутбуков
                 <button class='defaultButton expandable__icon' type='button'><img src="./img/goNext.svg" alt="Подробности"></button>
@@ -406,9 +406,9 @@
 
 
         <!-- Swipery 3 -->
-        <section class="l-info">
-          <h2 class="l-info__title">ЦЕНЫ НА УСЛУГИ</h2>
-          <nav class="swiper3 l-info__swiper visually-hidden">
+        <section class="info">
+          <h2 class="info__title">ЦЕНЫ НА УСЛУГИ</h2>
+          <nav class="swiper3 info__swiper visually-hidden">
             <ul class="swiper-wrapper">
               <li class="swiper-slide swiper__slide swiper__slide--height--200">
                 <ul class="swiper__pricing">

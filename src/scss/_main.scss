@@ -1,4 +1,4 @@
-.l-main {
+.main {
   background-color: $mainBg;
   padding-top: 24px;
   font-family: 'TT Lakes', sans-serif;
@@ -10,7 +10,7 @@
     max-width: 1120px;
   }
 
-  // .l-main__desktopHeader
+  // .main__desktopHeader
 
   &__desktopHeader {
     @media (min-width: $desktop) {
@@ -18,7 +18,7 @@
     }
   }
 
-  // .l-main__h1
+  // .main__h1
 
   &__h1 {
     margin: 0;
@@ -50,13 +50,13 @@
   }
 
 
-  // .l-main__slider
+  // .main__slider
 
   &__slider {
     position: relative;
   }
 
-  // .l-main__section
+  // .main__section
 
   &__section {
     padding-bottom: 24px;
@@ -72,7 +72,7 @@
     }
   }
 
-  // .l-main__article
+  // .main__article
 
   &__article {
     margin-left: 16px;
@@ -84,7 +84,7 @@
     }
   }
 
-  // .l-main__p1
+  // .main__p1
 
   &__p1 {
     margin: 0;
@@ -100,7 +100,7 @@
     }
   }
 
-  // .l-main__p2
+  // .main__p2
 
   &__p2 {
     display: none;
@@ -116,7 +116,7 @@
     }
   }
 
-  // .l-main__desktopText
+  // .main__desktopText
 
   &__desktopText {
     display: none;
@@ -132,7 +132,7 @@
     }
   }
 
-  // .l-main__readNext
+  // .main__readNext
 
   &__readNext {
     margin: 0;
@@ -154,7 +154,7 @@
     height: 24px;
   }
 
-  // .l-main__pictureWraper
+  // .main__pictureWraper
 
   &__pictureWraper {
     text-align: center;
@@ -164,7 +164,7 @@
     }
   }
 
-  // .l-main__picture
+  // .main__picture
 
   &__picture {
     @media (min-width: $tablet) {
