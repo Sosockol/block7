@@ -12,6 +12,7 @@
   z-index: 200;
   box-shadow: 16px 0px 52px 0px #0E185033;
   background-color: white;
+  overflow-y: auto;
 
   @media (min-width: $LPhone) and (max-width: $tablet) {
     padding: 24px;
